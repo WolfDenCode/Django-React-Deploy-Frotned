@@ -5,7 +5,7 @@ const TaskList = () => {
   const [tasks, setTasks] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:8000/api/tasks/")
+    fetch("https://django-react-deploy-backend.onrender.com/api/tasks/")
       .then((res) => res.json())
       .then((data) => setTasks(data));
   }, []);

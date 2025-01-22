@@ -9,7 +9,7 @@ const TaskForm = () => {
 
   useEffect(() => {
     if (id) {
-      fetch(`http://localhost:8000/api/tasks/${id}/`)
+      fetch(`https://django-react-deploy-backend.onrender.com/api/tasks/${id}/`)
         .then((res) => res.json())
         .then((data) => {
           setTitle(data.title);
@@ -23,8 +23,8 @@ const TaskForm = () => {
 
     const method = id ? "PUT" : "POST";
     const url = id
-      ? `http://localhost:8000/api/tasks/${id}/`
-      : "http://localhost:8000/api/tasks/";
+      ? `https://django-react-deploy-backend.onrender.com/api/tasks/${id}/`
+      : "https://django-react-deploy-backend.onrender.com/api/tasks/";
 
     fetch(url, {
       method,
